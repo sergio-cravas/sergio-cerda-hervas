@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2.125rem;
+  font-weight: 800;
+}
+
+.rrss {
+  display: flex;
+  gap: 0.5rem;
+
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 45px;
+}

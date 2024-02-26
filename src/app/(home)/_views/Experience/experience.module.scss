@@ -2,6 +2,19 @@
   width: 100%;
 
   display: flex;
-  flex-direction: column;
-  padding: 180px 0 136px 0;
+  flex-direction: row;
+  align-items: center;
+  padding: 12rem 0 8rem 3rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+
+  gap: 4rem;
+  overflow: auto;
+}
+
+.title {
+  width: fit-content;
 }

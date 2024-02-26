@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 8rem 3rem 12rem 3rem;
+  gap: 4rem;
+}
+
+.title {
+  align-items: center !important;
+}
+
+.rrss {
+  display: flex;
+  align-items: center;
+
+  gap: 3rem;
+}

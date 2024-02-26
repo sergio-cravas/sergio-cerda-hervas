@@ -1,4 +1,6 @@
-import { Head, Projects, Experience, Contact, About } from './_views';
+import { Head, Experience, Contact, About } from './_views';
+import { Footer } from '@/ui/Footer/footer';
+import { Divider } from '@/ui/Divider/divider';
 
 import styles from './page.module.scss';
 
@@ -7,13 +9,19 @@ export default function Home() {
     <main className={styles.main}>
       <Head />
 
+      <Divider />
+
       <Experience />
 
-      <Projects />
+      <Divider />
 
       <About />
 
+      <Divider />
+
       <Contact />
+
+      <Footer />
     </main>
   );
 }

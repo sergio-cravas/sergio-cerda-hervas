@@ -29,9 +29,17 @@ const About = () => {
           </p>
 
           <div className={styles.head__rrss}>
-            <Link href={LINKEDIN_URL}>LINKEDIN</Link>
-            <Link href={GITHUB_URL}>GITHUB</Link>
-            <Link href={EMAIL_URL}>EMAIL</Link>
+            <Link href={LINKEDIN_URL} target="_blank" className={styles.head__rrss__link}>
+              LINKEDIN
+            </Link>
+
+            <Link href={GITHUB_URL} target="_blank" className={styles.head__rrss__link}>
+              GITHUB
+            </Link>
+
+            <Link href={EMAIL_URL} target="_blank" className={styles.head__rrss__link}>
+              EMAIL
+            </Link>
           </div>
         </div>
       </div>

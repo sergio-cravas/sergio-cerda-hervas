@@ -10,16 +10,36 @@ import styles from './experience.module.scss';
 const Experience = () => {
   return (
     <div className={styles.container}>
-      <Title rotate title="Professional experience" className={styles.title} />
+      <Title title="Professional experience" className={styles.title} />
 
       <div className={styles.cards}>
-        <ExperienceCard company="HarBest Market" jobTitle="Frontend Developer" url={harbestThumbnail} />
+        <ExperienceCard
+          company="HarBest Market"
+          jobTitle="Frontend Developer"
+          range="January 2023 - March 2024"
+          url={harbestThumbnail}
+        />
 
-        <ExperienceCard company="OpenBootcamp" jobTitle="Lead Frontend Developer" url={openBootcampThumbnail} />
+        <ExperienceCard
+          company="OpenBootcamp"
+          jobTitle="Lead Frontend Developer"
+          range="May 2022 - January 2023"
+          url={openBootcampThumbnail}
+        />
 
-        <ExperienceCard company="Imagina Formación" jobTitle="Frontend Developer" url={imaginaThumbnail} />
+        <ExperienceCard
+          company="Imagina Formación"
+          jobTitle="Frontend Developer"
+          range="March 2021 - May 2022"
+          url={imaginaThumbnail}
+        />
 
-        <ExperienceCard company="Imagina Formación" jobTitle="Assistant and online tutor" url={imaginaThumbnail} />
+        <ExperienceCard
+          company="Imagina Formación"
+          jobTitle="Assistant and online tutor"
+          range="October 2019 - March 2021"
+          url={imaginaThumbnail}
+        />
       </div>
     </div>
   );

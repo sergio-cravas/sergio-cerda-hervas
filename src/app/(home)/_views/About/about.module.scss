@@ -3,7 +3,7 @@
 
   display: flex;
   flex-direction: column;
-  padding: 2.5rem 3rem;
+  padding: 2.5rem 8rem;
 }
 
 .title {
@@ -12,9 +12,11 @@
 
 .head {
   margin-top: 5rem;
+  max-width: 1000px;
 
   display: flex;
   align-content: center;
+  align-self: center;
 
   gap: 4.5rem;
 
@@ -41,6 +43,11 @@
   &__rrss {
     display: flex;
     gap: 0.5rem;
+
+    &__link {
+      color: #000000;
+      text-decoration: unset;
+    }
   }
 }
 

@@ -1,3 +1,7 @@
+$--mouse-x: 100;
+$--mouse-y: 100;
+$--gradient-size: 60vw;
+
 .container {
   position: fixed;
   pointer-events: none;
@@ -7,5 +11,19 @@
 
   z-index: 1;
   transition: all 1s ease-out;
-  background: radial-gradient(80vw circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.2), transparent 40%);
+  background: radial-gradient(
+    var(--gradient-size) circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.2),
+    transparent 40%
+  );
+}
+
+@keyframes pump {
+  from {
+    --gradient-size: 56vw;
+  }
+
+  to {
+    --gradient-size: 64vw;
+  }
 }

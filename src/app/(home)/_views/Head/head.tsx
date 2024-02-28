@@ -15,7 +15,7 @@ const dotGothic16 = DotGothic16({ subsets: ['latin'], weight: ['400'] });
 
 const Head = () => {
   return (
-    <div className={`${styles.container} ${pageStyles.view}`}>
+    <section className={`${styles.container} ${pageStyles.view}`}>
       <div className={styles.header}>
         <Logo />
 
@@ -33,7 +33,7 @@ const Head = () => {
       <div className={styles.content}>
         <div className={`${dotGothic16.className} ${styles.title}`}>Front-end. web (developer)_</div>
       </div>
-    </div>
+    </section>
   );
 };
 

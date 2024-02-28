@@ -12,7 +12,7 @@ import pageStyles from '../../page.module.scss';
 
 const Contact = () => {
   return (
-    <div className={`${styles.container} ${pageStyles.view}`}>
+    <section className={`${styles.container} ${pageStyles.view}`}>
       <Title title="contact me" className={styles.title} />
 
       <div className={styles.rrss}>
@@ -24,7 +24,7 @@ const Contact = () => {
           <Image priority src={linkedinIcon} alt="Reach me on Linkedin" width={24} height={24} />
         </Link>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -15,7 +15,7 @@ import styles from './about.module.scss';
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <Title title="about me" className={styles.title} />
 
       <div className={styles.head}>
@@ -50,7 +50,7 @@ const About = () => {
         <TechCard title="React Native" description="Android and iOS apps using React Native" icon={reactNativeIcon} />
         <TechCard title="Cypress" description="e2e testing, clean code other practices" icon={cypressIcon} />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,7 +10,7 @@ import pageStyles from '../../page.module.scss';
 
 const Experience = () => {
   return (
-    <div className={`${styles.container} ${pageStyles.view}`}>
+    <section className={`${styles.container} ${pageStyles.view}`}>
       <Title title="Professional experience" className={styles.title} />
 
       <div className={styles.cards}>
@@ -42,7 +42,7 @@ const Experience = () => {
           url={imaginaThumbnail}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,23 +1,19 @@
 import { Head, Experience, Contact, About } from './_views';
 import { Footer } from '@/ui/Footer/footer';
-import { Divider } from '@/ui/Divider/divider';
 
 import styles from './page.module.scss';
+import { CursorColor } from '@/ui/CursorColor/cursorColor';
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Head />
+      <CursorColor />
 
-      <Divider />
+      <Head />
 
       <Experience />
 
-      <Divider />
-
       <About />
-
-      <Divider />
 
       <Contact />
 

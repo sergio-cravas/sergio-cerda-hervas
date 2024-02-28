@@ -9,11 +9,7 @@ const Footer = () => {
 
       <div className={styles.credits}>
         <span>
-          design inspired by <strong>mrk</strong>
-        </span>
-
-        <span>
-          code built by <strong>me</strong>
+          built by <strong>me</strong>
         </span>
       </div>
     </div>

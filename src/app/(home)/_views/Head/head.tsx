@@ -9,12 +9,13 @@ import linkedinIcon from '@/assets/icons/linkedin.svg';
 import { LINKEDIN_URL, GITHUB_URL } from '@/utils/constants';
 
 import styles from './head.module.scss';
+import pageStyles from '../../page.module.scss';
 
 const dotGothic16 = DotGothic16({ subsets: ['latin'], weight: ['400'] });
 
 const Head = () => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${pageStyles.view}`}>
       <div className={styles.header}>
         <Logo />
 

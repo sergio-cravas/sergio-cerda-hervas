@@ -8,10 +8,11 @@ import githubIcon from '@/assets/icons/github.svg';
 import linkedinIcon from '@/assets/icons/linkedin.svg';
 
 import styles from './contact.module.scss';
+import pageStyles from '../../page.module.scss';
 
 const Contact = () => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${pageStyles.view}`}>
       <Title title="contact me" className={styles.title} />
 
       <div className={styles.rrss}>

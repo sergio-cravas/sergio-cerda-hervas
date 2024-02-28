@@ -1,0 +1,15 @@
+.container {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 3;
+  opacity: 1;
+  transition: all 1s ease-out;
+  background: radial-gradient(40rem circle at var(--mouse-x) var(--mouse-y), rgba(0, 0, 0, 0.6), transparent 40%);
+}
+
+.container::before {
+  opacity: 0;
+}

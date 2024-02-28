@@ -8,10 +8,10 @@ export const CursorColor = () => {
   const ref = useRef<any>();
 
   useEffect(() => {
-    document.addEventListener('mousemove', updateCursorPosition);
+    document?.addEventListener('mousemove', updateCursorPosition);
 
     return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
+      document?.removeEventListener('mousemove', updateCursorPosition);
     };
   }, []);
 

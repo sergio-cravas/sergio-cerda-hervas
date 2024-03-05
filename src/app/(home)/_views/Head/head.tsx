@@ -1,37 +1,45 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
-import { DotGothic16 } from 'next/font/google';
-
-import { Logo } from '@/ui/Logo/logo';
-import githubIcon from '@/assets/icons/github.svg';
-import linkedinIcon from '@/assets/icons/linkedin.svg';
-import { LINKEDIN_URL, GITHUB_URL } from '@/utils/constants';
+import { Card } from './Card/card';
 
 import styles from './head.module.scss';
 import pageStyles from '../../page.module.scss';
+import Image from 'next/image';
 
-const dotGothic16 = DotGothic16({ subsets: ['latin'], weight: ['400'] });
+import Avatar from '@/assets/images/Avatar_profesional.jpeg';
+import { CommentsIcon } from '@/assets/icons/fontawesome/commentsIcon';
+import { LightbulbIcon } from '@/assets/icons/fontawesome/lightbulbIcon';
+import { PeopleGroupIcon } from '@/assets/icons/fontawesome/peopleGroupIcon';
 
 const Head = () => {
   return (
     <section className={`${styles.container} ${pageStyles.view}`}>
-      <div className={styles.header}>
-        <Logo />
-
-        <div className={styles.rrss}>
-          <Link href={GITHUB_URL}>
-            <Image priority src={githubIcon} alt="Follow me on Github" width={24} height={24} />
-          </Link>
-
-          <Link href={LINKEDIN_URL}>
-            <Image priority src={linkedinIcon} alt="Reach me on Linkedin" width={24} height={24} />
-          </Link>
+      <div className={styles.content}>
+        <div className={styles['profile-photo']}>
+          <Image src={Avatar} width={128} height={128} alt="Profile image of Sergio" />
         </div>
+
+        <div className={styles.pretitle}>Hola, soy Sergio! 👋🏻</div>
+
+        <h1 className={styles.title}>Frontend web developer</h1>
       </div>
 
-      <div className={styles.content}>
-        <div className={`${dotGothic16.className} ${styles.title}`}>Front-end. web (developer)_</div>
+      <div className={styles.cards}>
+        <Card
+          icon={<CommentsIcon size={32} color="#858585" />}
+          title="Proactivo"
+          description="Impulso la innovación y el progreso mediante la identificación proactiva de oportunidades, la toma de iniciativa y la implementación de acciones anticipadas."
+        />
+
+        <Card
+          icon={<LightbulbIcon size={32} color="#858585" />}
+          title="Resolutivo"
+          description="Resuelvo desafíos complejos de manera eficiente, identificando problemas y aplicando soluciones efectivas en entornos laborales dinámicos."
+        />
+
+        <Card
+          icon={<PeopleGroupIcon size={32} color="#858585" />}
+          title="Trabajo en equipo"
+          description="Me enfoco en fomentar una colaboración efectiva, coordinar equipos y alcanzar objetivos compartidos en diversos proyectos."
+        />
       </div>
     </section>
   );

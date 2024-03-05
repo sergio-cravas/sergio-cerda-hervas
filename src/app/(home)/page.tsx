@@ -1,4 +1,4 @@
-import { Head, Experience, Contact, About } from './_views';
+import { Head, Experience, Contact, Work } from './_views';
 import { Footer } from '@/ui/Footer/footer';
 
 import styles from './page.module.scss';
@@ -13,7 +13,7 @@ export default function Home() {
 
       <Experience />
 
-      <About />
+      <Work />
 
       <Contact />
 

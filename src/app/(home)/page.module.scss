@@ -4,10 +4,9 @@
   display: flex;
   flex-direction: column;
 
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
+  gap: 6rem;
 }
 
 .view {
-  scroll-snap-align: start;
+  padding: 0 3rem;
 }

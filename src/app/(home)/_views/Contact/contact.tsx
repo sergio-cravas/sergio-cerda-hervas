@@ -1,11 +1,7 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
+import { LINKEDIN_URL } from '@/utils/constants';
 import { Title } from '@/ui/Title/title';
-import { GITHUB_URL, LINKEDIN_URL } from '@/utils/constants';
-
-import githubIcon from '@/assets/icons/github.svg';
-import linkedinIcon from '@/assets/icons/linkedin.svg';
 
 import styles from './contact.module.scss';
 import pageStyles from '../../page.module.scss';
@@ -13,17 +9,16 @@ import pageStyles from '../../page.module.scss';
 const Contact = () => {
   return (
     <section className={`${styles.container} ${pageStyles.view}`}>
-      <Title title="contact me" className={styles.title} />
+      <Title title="¿Hablamos?" className={styles.title} />
 
-      <div className={styles.rrss}>
-        <Link href={GITHUB_URL}>
-          <Image priority src={githubIcon} alt="Follow me on Github" width={24} height={24} />
-        </Link>
+      <p className={styles.text}>
+        Soy desarrollador Frontend con tres años de experiencia en desarrollo web con ReactJS, y orgulloso de mis ganas de hacer
+        un buen trabajo, esté donde esté.
+      </p>
 
-        <Link href={LINKEDIN_URL}>
-          <Image priority src={linkedinIcon} alt="Reach me on Linkedin" width={24} height={24} />
-        </Link>
-      </div>
+      <Link href={LINKEDIN_URL} className={styles['contact-link']}>
+        Vamos a contactar
+      </Link>
     </section>
   );
 };

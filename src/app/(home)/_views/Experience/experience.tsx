@@ -1,45 +1,49 @@
-import { ExperienceCard } from './_components/ExperienceCard/experienceCard';
-import { Title } from '../../../../ui/Title/title';
-
-import harbestThumbnail from '@/assets/images/harbest_thumbnail.png';
-import imaginaThumbnail from '@/assets/images/imagina_thumbnail.png';
-import openBootcampThumbnail from '@/assets/images/openbootcamp_thumbnail.png';
+import { Title } from '@/ui/Title/title';
 
 import styles from './experience.module.scss';
 import pageStyles from '../../page.module.scss';
+import { Card } from './_components/Card/card';
 
 const Experience = () => {
   return (
     <section className={`${styles.container} ${pageStyles.view}`}>
-      <Title title="Professional experience" className={styles.title} />
+      <Title title="Experiencia profesional" className={styles.title} />
 
-      <div className={styles.cards}>
-        <ExperienceCard
+      <div className={styles.list}>
+        <Card
           company="HarBest Market"
-          jobTitle="Frontend Developer"
-          range="January 2023 - March 2024"
-          url={harbestThumbnail}
+          title="Frontend Developer"
+          startDate={new Date(2023, 0, 30)}
+          endDate={new Date(2024, 2, 1)}
+          description="Mantenimiento y desarrollo de nuevas funcionalidades para las herramientas internas de la empresa y la tienda online para clientes, así como de las dos aplicaciones móviles desarrolladas con React Native."
+          technologies={[]}
         />
 
-        <ExperienceCard
+        <Card
           company="OpenBootcamp"
-          jobTitle="Lead Frontend Developer"
-          range="May 2022 - January 2023"
-          url={openBootcampThumbnail}
+          title="Frontend Lead Developer"
+          startDate={new Date(2022, 4, 1)}
+          endDate={new Date(2023, 0, 30)}
+          description="Desarrollo del campus virtual usado por los alumnos, así como de una herramienta interna para la gestión de sus contenidos y de la web pública."
+          technologies={[]}
         />
 
-        <ExperienceCard
+        <Card
           company="Imagina Formación"
-          jobTitle="Frontend Developer"
-          range="March 2021 - May 2022"
-          url={imaginaThumbnail}
+          title="Frontend Developer"
+          startDate={new Date(2021, 2, 1)}
+          endDate={new Date(2022, 4, 1)}
+          description="Desarrollo de un ERP con ReactJS para la gestión de todos los procesos internos de la empresa y vinculado con la web, también desarrollada en NextJS."
+          technologies={[]}
         />
 
-        <ExperienceCard
-          company="Imagina Formación"
-          jobTitle="Assistant and online tutor"
-          range="October 2019 - March 2021"
-          url={imaginaThumbnail}
+        <Card
+          company={'Imagina Formación'}
+          title={'Assistant y tutor online'}
+          startDate={new Date(2019, 9, 1)}
+          endDate={new Date(2021, 2, 1)}
+          description={'Desarrollo y mantenimiento de cursos online de formación tecnológica para empresas.'}
+          technologies={[]}
         />
       </div>
     </section>

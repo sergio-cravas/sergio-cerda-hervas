@@ -13,5 +13,10 @@ body {
   scroll-snap-type: y mandatory;
 
   color: #e0e1dd;
-  background-color: #0d1b2a;
+  background-color: #151515;
+}
+
+a {
+  color: #e0e1dd;
+  text-decoration: unset;
 }

@@ -8,9 +8,9 @@
 }
 
 .credits {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  white-space: no-break;
 
-  align-items: flex-end;
+  &__link {
+    font-weight: 600;
+  }
 }

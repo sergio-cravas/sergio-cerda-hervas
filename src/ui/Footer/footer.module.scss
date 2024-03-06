@@ -8,7 +8,12 @@
 }
 
 .credits {
-  white-space: no-break;
+  display: flex;
+  flex-direction: column;
+
+  & span {
+    white-space: no-break;
+  }
 
   &__link {
     font-weight: 600;

@@ -9,12 +9,18 @@ const Footer = () => {
     <footer className={styles.container}>
       <Logo />
 
-      <span className={styles.credits}>
-        desarrollado por{' '}
-        <Link href={LINKEDIN_URL} target="_blank" className={styles.credits__link}>
-          mi
-        </Link>
-      </span>
+      <div className={styles.credits}>
+        <span>
+          Web desarrollada por <strong>mi</strong>
+        </span>
+
+        <span>
+          Diseño inspirado en{' '}
+          <Link className={styles.credits__link} href="https://nolanperry.design/">
+            Nolan Perry
+          </Link>
+        </span>
+      </div>
     </footer>
   );
 };

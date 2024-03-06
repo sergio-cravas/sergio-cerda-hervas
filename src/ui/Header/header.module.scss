@@ -1,0 +1,15 @@
+.container {
+  position: absolute;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2.5rem 3rem;
+}
+
+.rrss {
+  display: flex;
+  gap: 1rem;
+}

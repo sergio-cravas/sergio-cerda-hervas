@@ -4,28 +4,41 @@
   display: flex;
   flex-direction: column;
 
-  gap: 0.5rem;
-
   align-items: flex-start;
 }
 
 .title {
   font-size: 1.25rem;
   font-weight: 600;
+
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   display: flex;
+  flex-direction: column;
   font-size: 1rem;
   color: #858585;
 
   gap: 0.25rem;
+  margin-bottom: 0.5rem;
 
   &__range {
     text-transform: capitalize;
+  }
+
+  @media (min-width: 460px) {
+    flex-direction: row;
   }
 }
 
 .description {
   font-size: 1rem;
+
+  margin-bottom: 1rem;
+}
+
+.technologies {
+  display: flex;
+  gap: 1rem;
 }

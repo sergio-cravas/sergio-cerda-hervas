@@ -1,8 +1,13 @@
 import { Title } from '@/ui/Title/title';
+import { Card } from './_components/Card/card';
 
 import styles from './experience.module.scss';
 import pageStyles from '../../page.module.scss';
-import { Card } from './_components/Card/card';
+
+import react from '@/assets/icons/react.svg';
+import nextJS from '@/assets/icons/next-js.svg';
+import cypress from '@/assets/icons/cypress.svg';
+import reactNative from '@/assets/icons/react-native.svg';
 
 const Experience = () => {
   return (
@@ -16,7 +21,11 @@ const Experience = () => {
           startDate={new Date(2023, 0, 30)}
           endDate={new Date(2024, 2, 1)}
           description="Mantenimiento y desarrollo de nuevas funcionalidades para las herramientas internas de la empresa y la tienda online para clientes, así como de las dos aplicaciones móviles desarrolladas con React Native."
-          technologies={[]}
+          technologies={[
+            { title: 'ReactJS', src: react },
+            { title: 'React Native', src: reactNative },
+            { title: 'Cypress', src: cypress },
+          ]}
         />
 
         <Card
@@ -25,7 +34,11 @@ const Experience = () => {
           startDate={new Date(2022, 4, 1)}
           endDate={new Date(2023, 0, 30)}
           description="Desarrollo del campus virtual usado por los alumnos, así como de una herramienta interna para la gestión de sus contenidos y de la web pública."
-          technologies={[]}
+          technologies={[
+            { title: 'ReactJS', src: react },
+            { title: 'NextJS', src: nextJS },
+            { title: 'Cypress', src: cypress },
+          ]}
         />
 
         <Card
@@ -34,7 +47,10 @@ const Experience = () => {
           startDate={new Date(2021, 2, 1)}
           endDate={new Date(2022, 4, 1)}
           description="Desarrollo de un ERP con ReactJS para la gestión de todos los procesos internos de la empresa y vinculado con la web, también desarrollada en NextJS."
-          technologies={[]}
+          technologies={[
+            { title: 'React', src: react },
+            { title: 'NextJS', src: nextJS },
+          ]}
         />
 
         <Card
@@ -42,8 +58,7 @@ const Experience = () => {
           title={'Assistant y tutor online'}
           startDate={new Date(2019, 9, 1)}
           endDate={new Date(2021, 2, 1)}
-          description={'Desarrollo y mantenimiento de cursos online de formación tecnológica para empresas.'}
-          technologies={[]}
+          description="Preparación de cursos online de formación tecnológica para empresas, tanto de la parte teórica como de proyectos y ejericios prácticos."
         />
       </div>
     </section>

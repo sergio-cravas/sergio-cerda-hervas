@@ -10,10 +10,10 @@ type Props = {
   endDate: Date;
   startDate: Date;
   description: string;
-  technologies: string[] | StaticImageData[];
+  technologies?: { title: string; src: string | StaticImageData }[];
 };
 
-export const Card = ({ title, company, endDate, startDate, description, technologies }: Props) => {
+export const Card = ({ title, company, endDate, startDate, description, technologies = [] }: Props) => {
   const range: string = `${format(startDate, 'MMM Y', { locale: es })} - ${format(endDate, 'MMM Y', { locale: es })}`;
 
   return (
@@ -27,11 +27,13 @@ export const Card = ({ title, company, endDate, startDate, description, technolo
 
       <p className={styles.description}>{description}</p>
 
-      <div className={styles.technologies}>
-        {technologies?.map((tech, index) => (
-          <Image key={`Tech ${index}`} src={tech} alt="Icon of tech" width={24} height={24} />
-        ))}
-      </div>
+      {Boolean(technologies?.length) && (
+        <div className={styles.technologies}>
+          {technologies?.map((tech, index) => (
+            <Image key={`Tech ${index}`} src={tech.src} alt={tech.title} title={tech.title} width={32} height={32} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

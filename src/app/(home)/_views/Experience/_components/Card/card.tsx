@@ -3,22 +3,30 @@ import Image, { StaticImageData } from 'next/image';
 import styles from './card.module.scss';
 import { format } from 'date-fns';
 import { es } from 'date-fns/locale';
+import Link from 'next/link';
 
 type Props = {
   company: string;
   title: string;
+  url?: string;
   endDate: Date;
   startDate: Date;
   description: string;
   technologies?: { title: string; src: string | StaticImageData }[];
 };
 
-export const Card = ({ title, company, endDate, startDate, description, technologies = [] }: Props) => {
+export const Card = ({ title, company, url, endDate, startDate, description, technologies = [] }: Props) => {
   const range: string = `${format(startDate, 'MMM Y', { locale: es })} - ${format(endDate, 'MMM Y', { locale: es })}`;
 
   return (
     <div className={styles.container}>
-      <span className={styles.title}>{company}</span>
+      {url ? (
+        <Link href={url} target="_blank">
+          <span className={styles.title}>{company}</span>
+        </Link>
+      ) : (
+        <span className={styles.title}>{company}</span>
+      )}
 
       <span className={styles.subtitle}>
         <strong>{title}, </strong>

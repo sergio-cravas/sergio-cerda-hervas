@@ -20,6 +20,7 @@ const Experience = () => {
           title="Frontend Developer"
           startDate={new Date(2023, 0, 30)}
           endDate={new Date(2024, 2, 1)}
+          url="https://pedidos.harbestmarket.com/"
           description="Mantenimiento y desarrollo de nuevas funcionalidades para las herramientas internas de la empresa y la tienda online para clientes, así como de las dos aplicaciones móviles desarrolladas con React Native."
           technologies={[
             { title: 'ReactJS', src: react },
@@ -31,6 +32,7 @@ const Experience = () => {
         <Card
           company="OpenBootcamp"
           title="Frontend Lead Developer"
+          url="https://open-bootcamp.com/"
           startDate={new Date(2022, 4, 1)}
           endDate={new Date(2023, 0, 30)}
           description="Desarrollo del campus virtual usado por los alumnos, así como de una herramienta interna para la gestión de sus contenidos y de la web pública."
@@ -44,6 +46,7 @@ const Experience = () => {
         <Card
           company="Imagina Formación"
           title="Frontend Developer"
+          url="https://imaginaformacion.com/"
           startDate={new Date(2021, 2, 1)}
           endDate={new Date(2022, 4, 1)}
           description="Desarrollo de un ERP con ReactJS para la gestión de todos los procesos internos de la empresa y vinculado con la web, también desarrollada en NextJS."

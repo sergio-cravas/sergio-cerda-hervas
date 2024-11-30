@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { Manrope } from 'next/font/google';
 
-import '../../styles/globals.css';
+import '../styles/globals.css';
 
 const manrope = Manrope({ subsets: ['latin'], weight: ['300', '400', '700', '800'] });
 

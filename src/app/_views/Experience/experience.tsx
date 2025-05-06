@@ -1,13 +1,13 @@
 import { Title } from '@/ui/Title/title';
 import { Card } from './_components/Card/card';
 
-import styles from './experience.module.scss';
 import pageStyles from '../../page.module.scss';
+import styles from './experience.module.scss';
 
-import react from '@/assets/icons/react.svg';
-import nextJS from '@/assets/icons/next-js.svg';
 import cypress from '@/assets/icons/cypress.svg';
+import nextJS from '@/assets/icons/next-js.svg';
 import reactNative from '@/assets/icons/react-native.svg';
+import react from '@/assets/icons/react.svg';
 
 const Experience = () => {
   return (
@@ -15,6 +15,34 @@ const Experience = () => {
       <Title title="Experiencia profesional" className={styles.title} />
 
       <div className={styles.list}>
+        <Card
+          company="Autónomo"
+          title="Frontend Developer"
+          startDate={new Date(2025, 2, 1)}
+          endDate={new Date()}
+          url="https://mca-groupe.com/offices/spain1"
+          description={`Me dedico principalmente al desarrollo frontend, tanto de aplicaciones web con ReactJS como de aplicaciones móviles con React Native.
+
+Hasta la fecha he tenido la suerte de trabajar en más de 10 proyectos, ¡y sumando!`}
+          technologies={[
+            { title: 'ReactJS', src: react },
+            { title: 'React Query', src: react },
+          ]}
+        />
+
+        <Card
+          company="Inditex, MCA"
+          title="Frontend Developer"
+          startDate={new Date(2024, 6, 1)}
+          endDate={new Date(2025, 2, 1)}
+          url="https://mca-groupe.com/offices/spain1"
+          description="Desarrollo de herramientas internas para el área de People Tech en Inditex."
+          technologies={[
+            { title: 'ReactJS', src: react },
+            { title: 'React Query', src: react },
+          ]}
+        />
+
         <Card
           company="HarBest Market"
           title="Frontend Developer"
@@ -54,14 +82,6 @@ const Experience = () => {
             { title: 'React', src: react },
             { title: 'NextJS', src: nextJS },
           ]}
-        />
-
-        <Card
-          company={'Imagina Formación'}
-          title={'Assistant y tutor online'}
-          startDate={new Date(2019, 9, 1)}
-          endDate={new Date(2021, 2, 1)}
-          description="Preparación de cursos online de formación tecnológica para empresas, tanto de la parte teórica como de proyectos y ejericios prácticos."
         />
       </div>
     </section>

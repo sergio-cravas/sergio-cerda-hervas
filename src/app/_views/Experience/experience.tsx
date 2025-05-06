@@ -16,7 +16,7 @@ const Experience = () => {
 
       <div className={styles.list}>
         <Card
-          company="Autónomo"
+          company="Frontend Developer (Freelance)"
           title="Frontend Developer"
           startDate={new Date(2025, 2, 1)}
           endDate={new Date()}

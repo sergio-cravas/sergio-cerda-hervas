@@ -16,7 +16,7 @@ type Props = {
 };
 
 export const Card = ({ title, company, url, endDate, startDate, description, technologies = [] }: Props) => {
-  const range: string = `${format(startDate, 'MMM Y', { locale: es })} - ${isToday(endDate) ? "Actualidad" : format(endDate, 'MMM Y', { locale: es })}`;
+  const range: string = `${format(startDate, 'MMM y', { locale: es })} - ${isToday(endDate) ? "Actualidad" : format(endDate, 'MMM y', { locale: es })}`;
 
   return (
     <div className={styles.container}>

@@ -28,7 +28,7 @@ const Contact = () => {
       <Title title="¿Necesitas mi ayuda?" className={styles.title} />
 
       <p className={styles.text}>
-        Soy desarrollador Frontend {calculateDate()} de experiencia en desarrollo web con ReactJS, y orgulloso de mis ganas de hacer
+        Soy desarrollador Frontend con {calculateDate()} de experiencia en desarrollo web con ReactJS, y orgulloso de mis ganas de hacer
         un buen trabajo, esté donde esté.
       </p>
 

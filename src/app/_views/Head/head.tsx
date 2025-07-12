@@ -1,13 +1,13 @@
 import { Card } from './Card/card';
 
-import styles from './head.module.scss';
-import pageStyles from '../../page.module.scss';
 import Image from 'next/image';
+import pageStyles from '../../page.module.scss';
+import styles from './head.module.scss';
 
-import Avatar from '@/assets/images/Avatar_profesional.jpg';
 import { CommentsIcon } from '@/assets/icons/commentsIcon';
 import { LightbulbIcon } from '@/assets/icons/lightbulbIcon';
 import { PeopleGroupIcon } from '@/assets/icons/peopleGroupIcon';
+import Avatar from '@/assets/images/Avatar_profesional.jpeg';
 
 const Head = () => {
   return (

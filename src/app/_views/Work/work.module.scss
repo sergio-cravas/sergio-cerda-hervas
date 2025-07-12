@@ -16,7 +16,11 @@
   width: 100%;
 
   display: flex;
-  flex-direction: column;
+  overflow-x: auto;
 
   gap: 1rem;
+
+  & > * {
+    min-width: calc(50% - 1rem);
+  }
 }

@@ -7,7 +7,9 @@ import styles from './experience.module.scss';
 import cypress from '@/assets/icons/cypress.svg';
 import nextJS from '@/assets/icons/next-js.svg';
 import reactNative from '@/assets/icons/react-native.svg';
+import reactQuery from '@/assets/icons/react-query.png';
 import react from '@/assets/icons/react.svg';
+
 
 const Experience = () => {
   return (
@@ -21,12 +23,11 @@ const Experience = () => {
           startDate={new Date(2025, 2, 1)}
           endDate={new Date()}
           url="https://mca-groupe.com/offices/spain1"
-          description={`Me dedico principalmente al desarrollo frontend, tanto de aplicaciones web con ReactJS como de aplicaciones móviles con React Native.
-
-Hasta la fecha he tenido la suerte de trabajar en más de 10 proyectos, ¡y sumando!`}
+          description={`Me dedico principalmente al desarrollo frontend, tanto de aplicaciones web con ReactJS como de aplicaciones móviles con React Native. Hasta la fecha he tenido la suerte de trabajar en más de 10 proyectos, ¡y sumando!`}
           technologies={[
             { title: 'ReactJS', src: react },
-            { title: 'React Query', src: react },
+            { title: 'React Native', src: reactNative },
+            { title: 'React Query', src: reactQuery },
           ]}
         />
 
@@ -39,7 +40,7 @@ Hasta la fecha he tenido la suerte de trabajar en más de 10 proyectos, ¡y suma
           description="Desarrollo de herramientas internas para el área de People Tech en Inditex."
           technologies={[
             { title: 'ReactJS', src: react },
-            { title: 'React Query', src: react },
+            { title: 'React Query', src: reactQuery },
           ]}
         />
 

@@ -9,7 +9,7 @@ import nextJS from '@/assets/icons/next-js.svg';
 import reactNative from '@/assets/icons/react-native.svg';
 import reactQuery from '@/assets/icons/react-query.png';
 import react from '@/assets/icons/react.svg';
-
+import redux from '@/assets/icons/redux.png';
 
 const Experience = () => {
   return (
@@ -28,6 +28,7 @@ const Experience = () => {
             { title: 'ReactJS', src: react },
             { title: 'React Native', src: reactNative },
             { title: 'React Query', src: reactQuery },
+            { title: 'Redux', src: redux },
           ]}
         />
 
@@ -55,6 +56,7 @@ const Experience = () => {
             { title: 'ReactJS', src: react },
             { title: 'React Native', src: reactNative },
             { title: 'Cypress', src: cypress },
+            { title: 'Redux', src: redux },
           ]}
         />
 

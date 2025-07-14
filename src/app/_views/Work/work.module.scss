@@ -21,6 +21,10 @@
   gap: 1rem;
 
   & > * {
-    min-width: calc(50% - 1rem);
+    min-width: 100%;
+
+    @media (min-width: 460px) {
+      min-width: calc(50% - 1rem);
+    }
   }
 }

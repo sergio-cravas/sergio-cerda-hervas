@@ -103,7 +103,7 @@ export const projects = [
     challenges_en: 'Balancing medical aesthetics with human warmth and WCAG accessibility.',
   },
   {
-    enabled: true,
+    enabled: false,
     slug: 'mind-pulse',
     title: 'Mind Pulse',
     pretitle: 'React Native',

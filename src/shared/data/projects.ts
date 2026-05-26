@@ -6,7 +6,7 @@ export const projects = [
     description_es: 'Plataforma para gestión de bares.',
     description_en: 'Bar management platform.',
     url: '#',
-    cover: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1600&q=80',
+    cover: '/images/barplay.jpg',
     overview_es:
       'Plataforma SaaS para que los bares gestionen pedidos en mesa, inventario y pagos desde una sola pantalla.',
     overview_en: 'SaaS platform for bars to manage table orders, inventory, and payments from a single dashboard.',
@@ -103,7 +103,7 @@ export const projects = [
     description_es: 'App de seguimiento de salud mental y mindfulness.',
     description_en: 'Mental health tracking and mindfulness app.',
     url: '#',
-    cover: 'https://images.unsplash.com/photo-1515023115689-589c33041697?w=1600&q=80',
+    cover: '/images/mind-pulse.jpg',
     overview_es: 'Aplicación móvil para registrar estado de ánimo, meditaciones guiadas y hábitos de bienestar.',
     overview_en: 'Mobile app to log mood, guided meditations, and wellness habits.',
     role_es: 'Frontend móvil y diseño de UX para flujos de bienestar.',

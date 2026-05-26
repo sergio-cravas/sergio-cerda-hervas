@@ -23,7 +23,6 @@ export const experience = [
     role: 'Frontend Developer',
     start: 'Jan 2023',
     end: 'Mar 2024',
-    url: 'https://pedidos.harbestmarket.com/',
     description_es:
       'Mantenimiento y nuevas funcionalidades para herramientas internas, e-commerce y dos apps móviles React Native.',
     description_en:

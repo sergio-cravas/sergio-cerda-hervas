@@ -99,7 +99,7 @@ export function Home() {
       {/* FEATURED WORK */}
       <Section id="work" title={intl.formatMessage({ id: 'work.title' })}>
         <div className="grid gap-6 sm:grid-cols-2">
-          {projects.map((p, i) => (
+          {projects.filter((p) => p.enabled).map((p, i) => (
             <ProjectCard key={p.slug} project={p} index={i} />
           ))}
         </div>

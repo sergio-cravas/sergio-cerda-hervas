@@ -1,5 +1,6 @@
 export const projects = [
   {
+    enabled: false,
     slug: 'bar-play',
     title: 'Bar Play',
     pretitle: 'React JS',
@@ -17,6 +18,7 @@ export const projects = [
     challenges_en: 'Offline-first sync on tablets with unstable connectivity.',
   },
   {
+    enabled: true,
     slug: 'destineti',
     title: 'Destineti',
     pretitle: 'React JS',
@@ -33,6 +35,7 @@ export const projects = [
     challenges_en: 'Map rendering with 500+ markers without sacrificing FPS.',
   },
   {
+    enabled: true,
     slug: 'onygo',
     title: 'Onygo',
     pretitle: 'React Native',
@@ -49,6 +52,7 @@ export const projects = [
     challenges_en: 'Background location tracking while respecting battery.',
   },
   {
+    enabled: true,
     slug: 'activament',
     title: 'Activament',
     pretitle: 'React JS',
@@ -65,6 +69,7 @@ export const projects = [
     challenges_en: 'SEO and performance on a tight budget.',
   },
   {
+    enabled: true,
     slug: 'score-padel',
     title: 'Score Padel',
     pretitle: 'React Native for TV · React JS',
@@ -81,6 +86,7 @@ export const projects = [
     challenges_en: 'D-pad focus management navigation.',
   },
   {
+    enabled: true,
     slug: 'pilarhervas',
     title: 'PilarHervas',
     pretitle: 'React JS',
@@ -97,6 +103,7 @@ export const projects = [
     challenges_en: 'Balancing medical aesthetics with human warmth and WCAG accessibility.',
   },
   {
+    enabled: true,
     slug: 'mind-pulse',
     title: 'Mind Pulse',
     pretitle: 'React Native',
@@ -115,4 +122,4 @@ export const projects = [
 ] as const;
 
 export type Project = (typeof projects)[number];
-export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
+export const getProject = (slug: string) => projects.find((p) => p.slug === slug && p.enabled);

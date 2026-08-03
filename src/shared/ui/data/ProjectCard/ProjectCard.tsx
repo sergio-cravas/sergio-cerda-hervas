@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 
+import type { Project } from '@/shared/data/projects';
 import { useLangStore } from '@/shared/store/langStore';
 import { useVisitedProjectsStore } from '@/shared/store/visitedProjectsStore';
-import type { Project } from '@/shared/data/projects';
 
 export function ProjectCard({ project, index }: { project: Project; index: number }) {
   const intl = useIntl();
@@ -30,7 +30,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
             loading="lazy"
             className="h-full w-full object-cover transition-[transform,filter] duration-500 ease-out group-hover:scale-[1.03] group-hover:blur-[1px]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 transition-smooth group-hover:opacity-100" />
+          <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-0 transition-smooth group-hover:opacity-100" />
           <div className="absolute inset-x-0 bottom-0 translate-y-2 px-5 pb-5 opacity-0 transition-smooth group-hover:translate-y-0 group-hover:opacity-100">
             <span className="text-xs font-mono text-[var(--accent-cyan)]">
               {intl.formatMessage({ id: 'work.view' })} →

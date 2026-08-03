@@ -41,10 +41,10 @@ function ProjectDetailView({ project }: { project: NonNullable<ReturnType<typeof
           alt={project.title}
           className="absolute inset-x-0 top-0 h-[50vh] w-full object-cover lg:h-[60vh]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
       </div>
 
-      <div className="mx-auto -mt-24 max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto -mt-10 max-w-3xl px-4 sm:px-6 lg:px-8">
         <Link to="/" className="link-underline inline-block text-sm text-muted-foreground hover:text-foreground">
           {intl.formatMessage({ id: 'project.back' })}
         </Link>

@@ -5,7 +5,7 @@ export const messages = {
     'nav.playground': 'Playground',
     'hero.pretitle': 'Hola, soy Sergio 👋',
     'hero.title': 'Software Engineer',
-    'hero.subtitle': 'Construyo software con',
+    'hero.subtitle': 'Creo software con',
     'about.title': 'Sobre mí',
     'about.body': 'Software Engineer con más de 5 años construyendo productos web y móviles.',
     'about.t1': 'Proactivo',

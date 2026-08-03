@@ -1,8 +1,8 @@
-import { useEffect } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { useIntl } from 'react-intl';
 import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'motion/react';
+import { useEffect } from 'react';
+import { useIntl } from 'react-intl';
+import { Link, Navigate, useParams } from 'react-router-dom';
 
 import { Badge } from '@/components/ui/badge';
 import { getProject } from '@/shared/data/projects';
@@ -34,9 +34,13 @@ function ProjectDetailView({ project }: { project: NonNullable<ReturnType<typeof
 
   return (
     <motion.article initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-      {/* Hero image */}
-      <div className="relative h-[50vh] w-full overflow-hidden lg:h-[60vh]">
-        <img src={project.cover} alt={project.title} className="h-full w-full object-cover" />
+      {/* Hero image: the container is 1.75rem taller than the visible photo so the title (-mt-24 below) lands fully past the photo's hard edge, on the gradient's solid tail, instead of straddling it */}
+      <div className="relative h-[calc(50vh+1.75rem)] w-full overflow-hidden lg:h-[calc(60vh+1.75rem)]">
+        <img
+          src={project.cover}
+          alt={project.title}
+          className="absolute inset-x-0 top-0 h-[50vh] w-full object-cover lg:h-[60vh]"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
       </div>
 

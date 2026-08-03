@@ -58,38 +58,9 @@ export function Home() {
           className="mt-6 text-base text-muted-foreground sm:text-lg"
         >
           {intl.formatMessage({ id: 'hero.subtitle' })}{' '}
-          <Typewriter words={['React', 'React Native', 'TypeScript', 'Next.js']} className="font-bold" />
+          <Typewriter words={['React', 'React Native', 'TypeScript']} className="font-bold" />
         </motion.p>
       </section>
-
-      {/* ABOUT */}
-       {/*
-        <Section id="about" title={intl.formatMessage({ id: 'about.title' })}>
-          <p className="max-w-2xl text-base leading-relaxed text-muted-foreground">
-            {intl.formatMessage({ id: 'about.body' })}
-          </p>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {[
-              { Icon: MessagesSquare, t: 'about.t1', d: 'about.t1.desc' },
-              { Icon: Lightbulb, t: 'about.t2', d: 'about.t2.desc' },
-              { Icon: Users, t: 'about.t3', d: 'about.t3.desc' },
-            ].map(({ Icon, t, d }) => (
-              <motion.div
-                key={t}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="rounded-sm border border-border bg-surface p-5 transition-smooth hover:-translate-y-1 hover:border-border-strong"
-              >
-                <Icon className="h-5 w-5 text-accent-cyan" />
-                <div className="mt-4 text-sm font-bold text-foreground">{intl.formatMessage({ id: t })}</div>
-                <div className="mt-1 text-xs text-muted-foreground">{intl.formatMessage({ id: d })}</div>
-              </motion.div>
-            ))}
-          </div>
-        </Section>
-      */}
       
       {/* EXPERIENCE */}
       <Section id="experience" title={intl.formatMessage({ id: 'experience.title' })}>

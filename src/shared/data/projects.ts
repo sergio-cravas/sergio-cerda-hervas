@@ -1,6 +1,6 @@
 export const projects = [
   {
-    enabled: false,
+    enabled: true,
     slug: 'bar-play',
     title: 'Bar Play',
     pretitle: 'React JS',

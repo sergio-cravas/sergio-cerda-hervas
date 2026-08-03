@@ -37,7 +37,7 @@ function ProjectDetailView({ project }: { project: NonNullable<ReturnType<typeof
       {/* Hero image */}
       <div className="relative h-[50vh] w-full overflow-hidden lg:h-[60vh]">
         <img src={project.cover} alt={project.title} className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background from-50% to-transparent" />
       </div>
 
       <div className="mx-auto -mt-24 max-w-3xl px-4 sm:px-6 lg:px-8">

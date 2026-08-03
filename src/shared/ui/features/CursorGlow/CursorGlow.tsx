@@ -5,8 +5,6 @@ export function CursorGlow() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    el.style.setProperty('--mx', '-9999px');
-    el.style.setProperty('--my', '-9999px');
     const onMove = (e: MouseEvent) => {
       el.style.setProperty('--mx', `${e.clientX}px`);
       el.style.setProperty('--my', `${e.clientY}px`);

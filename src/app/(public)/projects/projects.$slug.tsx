@@ -34,23 +34,15 @@ function ProjectDetailView({ project }: { project: NonNullable<ReturnType<typeof
 
   return (
     <motion.article initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-      {/* Hero image: the container is 1.75rem taller than the visible photo so the title (-mt-24 below) lands fully past the photo's hard edge, on the gradient's solid tail, instead of straddling it */}
-      <div className="relative h-[calc(50vh+1.75rem)] w-full overflow-hidden lg:h-[calc(60vh+1.75rem)]">
-        <img
-          src={project.cover}
-          alt={project.title}
-          className="absolute inset-x-0 top-0 h-[50vh] w-full object-cover lg:h-[60vh]"
-        />
-        <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
-      </div>
-
-      <div className="mx-auto -mt-10 max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto mt-24 max-w-3xl px-4 sm:px-6 lg:px-8">
         <Link to="/" className="link-underline inline-block text-sm text-muted-foreground hover:text-foreground">
           {intl.formatMessage({ id: 'project.back' })}
         </Link>
-        <div className="mt-6 font-mono text-xs uppercase tracking-wider text-[var(--accent-cyan)]">
+
+        <div className="mt-6 font-mono text-xs uppercase tracking-wider text-accent-cyan">
           {project.pretitle}
         </div>
+
         <h1 className="mt-2 text-4xl font-extrabold sm:text-5xl">{project.title}</h1>
         <p className="mt-3 text-lg text-muted-foreground">{description}</p>
 

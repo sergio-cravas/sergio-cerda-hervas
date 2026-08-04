@@ -32,7 +32,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
           />
           <div className="absolute inset-0 bg-linear-to-t from-background/90 via-background/20 to-transparent opacity-0 transition-smooth group-hover:opacity-100" />
           <div className="absolute inset-x-0 bottom-0 translate-y-2 px-5 pb-5 opacity-0 transition-smooth group-hover:translate-y-0 group-hover:opacity-100">
-            <span className="text-xs font-mono text-[var(--accent-cyan)]">
+            <span className="text-xs font-mono text-accent-cyan">
               {intl.formatMessage({ id: 'work.view' })} →
             </span>
           </div>

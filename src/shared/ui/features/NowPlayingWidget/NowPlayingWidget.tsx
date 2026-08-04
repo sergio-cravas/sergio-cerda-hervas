@@ -1,7 +1,7 @@
 import { Music2 } from 'lucide-react';
 
-import { Skeleton } from '@/components/ui/skeleton';
 import { useNowPlaying } from '@/api/hooks/useNowPlaying';
+import { Skeleton } from '@/components/ui/skeleton';
 
 interface Props {
   variant?: 'mini' | 'full';
@@ -28,7 +28,7 @@ export function NowPlayingWidget({ variant = 'mini' }: Props) {
         )}
         <div className="hidden sm:flex w-32 flex-col overflow-hidden">
           <div className="flex items-center gap-1 text-[10px] uppercase tracking-wider text-muted-foreground">
-            <Music2 className="h-2.5 w-2.5 text-[var(--accent-cyan)] progress-pulse" />
+            <Music2 className="h-2.5 w-2.5 text-accent-cyan progress-pulse" />
             Now playing
           </div>
           {isLoading || !data ? (
@@ -65,7 +65,7 @@ export function NowPlayingWidget({ variant = 'mini' }: Props) {
         )}
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground">
-            <Music2 className="h-3 w-3 text-[var(--accent-cyan)] progress-pulse" />
+            <Music2 className="h-3 w-3 text-accent-cyan progress-pulse" />
             {data?.isPlaying ? 'Now playing' : 'Last played'}
           </div>
           {isLoading || !data ? (

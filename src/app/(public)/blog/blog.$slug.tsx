@@ -1,7 +1,7 @@
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { format } from 'date-fns';
 import { motion } from 'motion/react';
 import { useIntl } from 'react-intl';
-import { format } from 'date-fns';
+import { Link, Navigate, useParams } from 'react-router-dom';
 
 import { getBlogPost } from '@/shared/data/blog';
 import { useLangStore } from '@/shared/store/langStore';
@@ -41,7 +41,7 @@ function BlogPostView({ post }: { post: NonNullable<ReturnType<typeof getBlogPos
         <h1 className="mt-4 text-4xl font-extrabold sm:text-5xl">{title}</h1>
         <div className="mt-4 flex flex-wrap gap-2">
           {post.tags.map((t: string) => (
-            <span key={t} className="font-mono text-[11px] lowercase text-[var(--accent-cyan)]">
+            <span key={t} className="font-mono text-[11px] lowercase text-accent-cyan">
               #{t}
             </span>
           ))}

@@ -1,7 +1,7 @@
-import { useState, useCallback, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
+import { useCallback, useRef, useState } from 'react';
 import { useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/shared/utils/cn';
@@ -11,7 +11,7 @@ export function HorseGame() {
   const initial = useRef(createBoard()).current;
   const [board, setBoard] = useState<Cell[][]>(initial.board);
   const [horse, setHorse] = useState<Pos>(initial.horse);
-  const [fenceCount, setFenceCount] = useState(0);
+  const [fenceCount, setFenceCount] = useState<number>(0);
   const [status, setStatus] = useState<'playing' | 'trapped' | 'escaped'>('playing');
   const [best, setBest] = useState<number | null>(null);
 

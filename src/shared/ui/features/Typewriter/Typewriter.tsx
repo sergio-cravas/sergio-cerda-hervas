@@ -6,9 +6,9 @@ interface Props {
 }
 
 export function Typewriter({ words, className }: Props) {
-  const [index, setIndex] = useState(0);
-  const [text, setText] = useState('');
-  const [deleting, setDeleting] = useState(false);
+  const [index, setIndex] = useState<number>(0);
+  const [text, setText] = useState<string>('');
+  const [deleting, setDeleting] = useState<boolean>(false);
 
   useEffect(() => {
     const word = words[index % words.length];
@@ -33,7 +33,7 @@ export function Typewriter({ words, className }: Props) {
   return (
     <span className={className}>
       <span className="text-gradient">{text}</span>
-      <span className="ml-0.5 inline-block h-[0.9em] w-[2px] -mb-1 bg-foreground/70 animate-pulse" />
+      <span className="ml-0.5 inline-block h-[0.9em] w-0.5 -mb-1 bg-foreground/70 animate-pulse" />
     </span>
   );
 }

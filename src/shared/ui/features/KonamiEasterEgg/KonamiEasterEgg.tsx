@@ -1,5 +1,5 @@
-import { useState, useCallback, useEffect } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { useCallback, useEffect, useState } from 'react';
 import { toast } from 'sonner';
 
 import { useKonamiCode } from '@/shared/hooks/useKonamiCode';
@@ -7,7 +7,7 @@ import { useKonamiCode } from '@/shared/hooks/useKonamiCode';
 const PARTICLES = Array.from({ length: 32 }, (_, i) => i);
 
 export function KonamiEasterEgg() {
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState<boolean>(false);
 
   const trigger = useCallback(() => {
     setActive(true);

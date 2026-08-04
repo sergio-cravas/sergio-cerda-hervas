@@ -29,12 +29,14 @@ export function Home() {
           className="group relative"
         >
           <div className="absolute -inset-2 rounded-full bg-gradient-accent opacity-0 blur-xl transition-smooth group-hover:opacity-40" />
+        
           <img
             src={AVATAR}
             alt="Sergio Cerdá"
             className="relative h-32 w-32 rounded-full border border-border-strong object-cover"
           />
         </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,6 +45,7 @@ export function Home() {
         >
           {intl.formatMessage({ id: 'hero.pretitle' })}
         </motion.p>
+
         <motion.h1
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,6 +54,7 @@ export function Home() {
         >
           {intl.formatMessage({ id: 'hero.title' })}
         </motion.h1>
+
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -58,7 +62,7 @@ export function Home() {
           className="mt-6 text-base text-muted-foreground sm:text-lg"
         >
           {intl.formatMessage({ id: 'hero.subtitle' })}{' '}
-          <Typewriter words={['React', 'React Native', 'TypeScript']} className="font-bold" />
+          <Typewriter words={['React', 'React Native', 'TypeScript', 'Vue', 'Node.js']} className="font-bold" />
         </motion.p>
       </section>
       

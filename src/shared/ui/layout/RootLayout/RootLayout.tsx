@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 
 import { CursorGlow } from '@/shared/ui/features/CursorGlow';
 import { KonamiEasterEgg } from '@/shared/ui/features/KonamiEasterEgg';
+import { StarField } from '@/shared/ui/features/StarField';
 import { Footer } from '@/shared/ui/layout/Footer';
 import { Header } from '@/shared/ui/layout/Header';
 import { LeftSidebar } from '@/shared/ui/layout/LeftSidebar';
@@ -12,6 +13,7 @@ export function RootLayout({ children }: { children: ReactNode }) {
 
   return (
     <div className="relative min-h-screen overflow-x-hidden">
+      <StarField />
       <CursorGlow />
       <Header />
       <LeftSidebar />

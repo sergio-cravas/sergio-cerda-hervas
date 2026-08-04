@@ -142,6 +142,13 @@
   transition: background 80ms linear;
 }
 
+.star-field {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
 /* Konami inversion */
 .invert-scheme {
   filter: invert(1) hue-rotate(180deg);

@@ -22,7 +22,7 @@ export const messages = {
     'nowplaying.cta': 'O echa un vistazo a mi playlist de código →',
     'nowplaying.idle': 'Nada sonando ahora mismo',
     'contact.title': '¿Hablamos?',
-    'contact.body': '¿Tienes un proyecto interesante o solo quieres saludar? Mi bandeja está abierta.',
+    'contact.body': '¿Tienes un proyecto entre manos o solo te apetece saludar? Te leo con gusto.',
     'contact.cta': 'Escríbeme',
     'project.back': '← Volver',
     'project.live': 'Visitar →',

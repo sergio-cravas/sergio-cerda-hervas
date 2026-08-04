@@ -7,8 +7,8 @@ import { useLangStore } from '@/shared/store/langStore';
 
 export function ExperienceItem({ item, index }: { item: Experience; index: number }) {
   const lang = useLangStore((s) => s.lang);
-  const description = lang === 'es' ? item.description_es : item.description_en;
   const url = 'url' in item ? item.url : undefined;
+  const hasPositions = 'positions' in item;
 
   return (
     <motion.li
@@ -36,20 +36,53 @@ export function ExperienceItem({ item, index }: { item: Experience; index: numbe
           ) : (
             <span className="text-base font-bold text-foreground">{item.company}</span>
           )}
-          <span className="text-xs text-muted-foreground">· {item.role}</span>
+          {!hasPositions && <span className="text-xs text-muted-foreground">· {item.role}</span>}
         </div>
-        <p className="mt-2 text-sm text-muted-foreground">{description}</p>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {item.tech.map((t) => (
-            <Badge
-              key={t}
-              variant="outline"
-              className="rounded-sm border-border bg-surface font-mono text-[10px] uppercase tracking-wider text-muted-foreground"
-            >
-              {t}
-            </Badge>
-          ))}
-        </div>
+        {'positions' in item ? (
+          <ul className="mt-4 space-y-5">
+            {item.positions.map((position) => (
+              <li key={position.role} className="border-l border-border/70 pl-4">
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="text-sm font-semibold text-foreground">{position.role}</span>
+                  <span className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+                    {position.start} — {position.end}
+                  </span>
+                </div>
+                <p className="mt-1.5 text-sm text-muted-foreground">
+                  {lang === 'es' ? position.description_es : position.description_en}
+                </p>
+                <div className="mt-2.5 flex flex-wrap gap-1.5">
+                  {position.tech.map((t) => (
+                    <Badge
+                      key={t}
+                      variant="outline"
+                      className="rounded-sm border-border bg-surface font-mono text-[10px] uppercase tracking-wider text-muted-foreground"
+                    >
+                      {t}
+                    </Badge>
+                  ))}
+                </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {lang === 'es' ? item.description_es : item.description_en}
+            </p>
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {item.tech.map((t) => (
+                <Badge
+                  key={t}
+                  variant="outline"
+                  className="rounded-sm border-border bg-surface font-mono text-[10px] uppercase tracking-wider text-muted-foreground"
+                >
+                  {t}
+                </Badge>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </motion.li>
   );

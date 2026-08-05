@@ -1,16 +1,5 @@
 export const experience = [
   {
-    company: 'Kymatio',
-    role: 'Software Engineer',
-    start: 'Sep 2026',
-    end: 'Present',
-    description_es:
-      'Software Engineer desarrollando soluciones end-to-end (Vue/TypeScript + Go) para departamentos internos, migrando el stack antiguo sin tipar (JS, Python, PHP) hacia TypeScript y Go. Referente de IA aplicada al desarrollo, promoviendo buenas prácticas y formando a equipos técnicos y no técnicos.',
-    description_en:
-      'Software Engineer building end-to-end solutions (Vue/TypeScript + Go) for internal departments, migrating the legacy untyped stack (JS, Python, PHP) to TypeScript and Go. AI adoption lead for engineering, promoting best practices and training both technical and non-technical teams.',
-    tech: ['Vue', 'TypeScript', 'Go', 'Python', 'PHP'],
-  },
-  {
     company: 'Frontend Developer (Freelance)',
     role: 'Frontend Developer',
     start: 'Jan 2025',

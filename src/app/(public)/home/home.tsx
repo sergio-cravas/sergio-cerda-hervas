@@ -18,6 +18,10 @@ export function Home() {
 
   const showSpotify = import.meta.env.VITE_SHOW_SPOTIFY === 'true';
 
+  const visibleExperience = experience.filter(
+    (item) => !('visibleFrom' in item) || new Date() >= new Date(item.visibleFrom)
+  );
+
   return (
     <div className="mx-auto max-w-5xl px-4 pt-16 sm:px-6 lg:px-8 lg:pt-24">
       {/* HERO */}
@@ -69,7 +73,7 @@ export function Home() {
       {/* EXPERIENCE */}
       <Section id="experience" title={intl.formatMessage({ id: 'experience.title' })}>
         <ol className="mt-2">
-          {experience.map((item, i) => (
+          {visibleExperience.map((item, i) => (
             <ExperienceItem key={item.company} item={item} index={i} />
           ))}
         </ol>
